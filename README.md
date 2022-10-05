@@ -39,6 +39,11 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 - Arduino UNO
 - Tags RFID
 
+### Pasos de Instalación 🪜
+1. Construir el esquema de conexión
+<!-- img -->
+<img src="img/1paso.jfif" alt="connection" width="500" style="border-radius: 8px;"/>
+
 
 
 ## Modo de Uso 📋
