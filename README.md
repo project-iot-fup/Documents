@@ -5,7 +5,11 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 
 ## Tabla de Contenido 📄
 1. [Arquitectura](#architecture)
-2. [Tecnlogias](#technologies)
+2. [Instalación](#installation)
+3. [Modo de Uso](#usage)
+4. [Base de Datos](#database)
+5. [Tecnlogias](#technologies)
+6. [Autores](#authors)
 
 
 ## Arquitectura 🛠️
