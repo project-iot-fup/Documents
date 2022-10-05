@@ -4,18 +4,28 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 
 
 ## Tabla de Contenido 📄
-1. [Infraestructura](#Infraestructura)
+1. [Arquitectura](#architecture)
 2. [Tecnlogias](#technologies)
 
 
-## Infraestructura 🛠️
+## Arquitectura 🛠️
+<!-- img -->
+<img src="img/Architecture.png" alt="architecture" width="500" style="border-radius: 8px;"/>
 
 ### Componentes 📌
 - Raspberry Pi 3
 - Arduino UNO
 - Sensor MFRC-522
+- Tajetas RFID
+
+### Esquema de Conexión 🔖
+<!-- img -->
+<img src="img/RFID_Schema_image.png" alt="connection" width="500" style="border-radius: 8px;"/>
+
 
 ## Base de Datos 💽
+
+
 
 
 
@@ -29,6 +39,7 @@ En este proyecto se usaron las siguientes tecnologias:
 * [Django](https://www.djangoproject.com/): Version 4.1.0
 * [TailwindCSS](https://tailwindcss.com/): Version 3.1.8
 * [Arduino](https://www.arduino.cc/): Version 2.0.0
+* [Fritzing](https://fritzing.org/): Version 0.9.6
 
 ### Contribuciones 🖇️
 
