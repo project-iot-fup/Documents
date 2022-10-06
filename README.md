@@ -48,12 +48,8 @@ Este esquema de conexión es para el sensor RFID-RC522.
 <!-- img -->
 <img src="img/1paso.jfif" alt="connection" width="500" style="border-radius: 8px;"/>
 
-<br/>
-
 2. **Ejecutar Codigo Arduino**
-   <br/>
-   * Instalar la libreria `MFRC522` de GithubCommunity en el IDE de Arduino
-   <br/>
+   * Instalar la libreria `MFRC522` de GithubCommunity en el IDE de Arduino.
    * Abrir el archivo `RFID.ino` y cargarlo en el Arduino UNO
 
 ```c
@@ -94,7 +90,6 @@ void loop()
   }
 }
 ```
-<br/>
 
 3. **Clonar el repositorio del Backend**
 ```bash
@@ -159,7 +154,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/images/'
 ```
-<br/>
 
 4. **Clonar el repositorio del Frontend**
 ```bash
