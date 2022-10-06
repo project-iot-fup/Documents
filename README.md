@@ -10,6 +10,7 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 4. [Base de Datos](#database)
 5. [Tecnlogias](#technologies)
 6. [Autores](#authors)
+7. [Licencia](#license)
 
 
 ## Arquitectura 🛠️
