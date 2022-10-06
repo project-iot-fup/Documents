@@ -205,4 +205,9 @@ $ Manuel Esteban Erazo
 $ Jose Domingo Aranda Calambas
 $ Jhon Leon
 ```
+
+## Licencia MIT ⚖️
+
+Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
 ***
