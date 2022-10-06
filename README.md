@@ -7,10 +7,11 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 1. [Arquitectura](#architecture)
 2. [Instalación](#installation)
 3. [Modo de Uso](#usage)
-4. [Base de Datos](#database)
-5. [Tecnlogias](#technologies)
-6. [Autores](#authors)
-7. [Licencia](#license)
+4. [Integración con RaspberryPi](#integration)
+5. [Base de Datos](#database)
+6. [Tecnlogias](#technologies)
+7. [Autores](#authors)
+8. [Licencia](#license)
 
 
 ## Arquitectura 🛠️
@@ -199,6 +200,8 @@ $ npm start
 3. El Arduino envia la información de la tarjeta al Raspberry Pi.
 4. Si la tarjeta esta relacionada con un estudiante, debe validar la información de la tarjeta con la base de datos, además confirmar si el estudiante pertenece a dicha clase.
 5. Luego se muestra la información del estudiante en la pantalla del docente, y se registra la asistencia en la base de datos.
+
+## Integración con Raspberry Pi 🧯
 
 
 ## Base de Datos 💽
