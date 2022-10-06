@@ -115,12 +115,23 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
-**⚠️**: Para correr el proyecto en modo de desarrollo, se debe tener instalado XAMPP o PostgreSQL y crear una base de datos llamada `iot` en el phpmyadmin o en el pgadmin respectivamente.
+**⚠️** Para correr el proyecto en modo de desarrollo, se debe tener instalado XAMPP o PostgreSQL y crear una base de datos llamada `iot` en el phpmyadmin o en el pgadmin respectivamente.
 
-**🎉**: Para correr el proyecto en modo de producción, se debe tener una cuenta en AWS y crear una instancia de RDS con PostgreSQL y de igual manera crear una base de datos llamada `iot`, para luego configurar las variables de entorno en el archivo `.env` del proyecto.
+**🎉** Para correr el proyecto en modo de producción, se debe tener una cuenta en AWS y crear una instancia de RDS con PostgreSQL y de igual manera crear una base de datos llamada `iot`, para luego configurar las variables de entorno en el archivo `.env` del proyecto.
+
+**💊** Tips del proyecto:
+
+* Configurar las variables de entorno, puede seguir este [tutorial](https://www.youtube.com/watch?v=IolxqkL7cD8).
+* Crear Base de Datos en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=KngM5bfpttA).
+* Crear Bucket en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=e6w9LwZJFIA).
 
 ```bash
 # Variables de entorno
+DB_NAME='name_database'
+DB_USER='user_database'
+DB_PASSWORD='password_database'
+DB_HOST='host_database'
+
 AWS_ACCESS_KEY_ID='your_access_key_id'
 AWS_SECRET_ACCESS_KEY = 'your_secret_access_key'
 AWS_STORAGE_BUCKET_NAME = 'your_bucket_name'
@@ -128,6 +139,18 @@ AWS_STORAGE_BUCKET_NAME = 'your_bucket_name'
 
 ```python
 # settings.py
+
+# Base de datos
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': '5432'
+    }
+}
 
 # AWS settings
 AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
