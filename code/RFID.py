@@ -1,9 +1,10 @@
-import serial, time
-arduino = serial.Serial('COM3', 9600)
-time.sleep(2)
-rawString = arduino.readline()
-print(rawString)
-while True:
-    sarduino = arduino.readline()
-    print (sarduino.strip())
-arduino.close()
+import serial
+import time
+
+def arduino():
+    port = serial.Serial('COM3', 9600, timeout=1)
+    time.sleep(2)
+    read = port.readline()
+    hexa = read.decode('utf-8')
+    port.close()
+    return hexa

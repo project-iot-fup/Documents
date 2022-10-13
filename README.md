@@ -2,8 +2,8 @@
 
 Este proyecto es una aplicación web que permite el registro de asistencia de los estudiantes de la Fundacion Universitaria de popayan, mediante el uso de un sensor RFID y una Raspberry Pi 3.
 
-
 ## Tabla de Contenido 📄
+
 1. [Arquitectura](#architecture)
 2. [Instalación](#installation)
 3. [Modo de Uso](#usage)
@@ -13,13 +13,14 @@ Este proyecto es una aplicación web que permite el registro de asistencia de lo
 7. [Autores](#authors)
 8. [Licencia](#license)
 
-
 ## Arquitectura 🛠️
+
 ### Diseño de la Arquitectura ✒️
 <!-- img -->
 <img src="img/Architecture.png" alt="architecture" width="500" style="border-radius: 8px;"/>
 
 ### Componentes Hardware 📌
+
 - Raspberry Pi 3
 - Arduino UNO
 - Sensor MFRC-522 o Modulo RFID-RC522
@@ -32,7 +33,9 @@ Este esquema de conexión es para el sensor RFID-RC522.
 <img src="img/RFID_Schema_image.png" alt="connection" width="500" style="border-radius: 8px;"/>
 
 ## Instalación 🔧
+
 ### Requisitos del proyecto 🪛
+
 - Python 3.10
 - Arduino IDE
 - XAMPP(para pruebas locales)
@@ -46,13 +49,14 @@ Este esquema de conexión es para el sensor RFID-RC522.
 - Tags RFID
 
 ### Pasos de Instalación 🪜
+
 1. **Construir el esquema de conexión**
 <!-- img -->
 <img src="img/1paso.jfif" alt="connection" width="500" style="border-radius: 8px;"/>
 
 2. **Ejecutar Codigo Arduino**
-   * Instalar la libreria `MFRC522` de GithubCommunity en el IDE de Arduino.
-   * Abrir el archivo `RFID.ino` y cargarlo en el Arduino UNO
+   - Instalar la libreria `MFRC522` de GithubCommunity en el IDE de Arduino.
+   - Abrir el archivo `RFID.ino` y cargarlo en el Arduino UNO
 
 ```c
 #include <SPI.h>
@@ -67,7 +71,6 @@ void setup()
   Serial.begin(9600); // Iniciamos la comunicación  serial
   SPI.begin();        // Iniciamos el Bus SPI
   mfrc522.PCD_Init(); // Iniciamos  el MFRC522
-  Serial.println("Lectura del UID");
 }
 
 void loop()
@@ -75,14 +78,12 @@ void loop()
   // Revisamos si hay nuevas tarjetas  presentes
   if (mfrc522.PICC_IsNewCardPresent())
   {
-    // Seleccionamos una tarjeta
-    if (mfrc522.PICC_ReadCardSerial())
+    if (mfrc522.PICC_ReadCardSerial()) // Seleccionamos una tarjeta
     {
       // Enviamos serialemente su UID
-      Serial.print("Card UID:");
       for (byte i = 0; i < mfrc522.uid.size; i++)
       {
-        Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+        Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? "0" : "");
         Serial.print(mfrc522.uid.uidByte[i], HEX);
       }
       Serial.println();
@@ -94,6 +95,7 @@ void loop()
 ```
 
 3. **Clonar el repositorio del Backend**
+
 ```bash
 # Clonar el repositorio
 $ git clone https://github.com/project-iot-fup/Backend
@@ -123,9 +125,9 @@ $ python manage.py runserver
 
 **💊** Tips del proyecto:
 
-* Configurar las variables de entorno, puede seguir este [tutorial](https://www.youtube.com/watch?v=IolxqkL7cD8).
-* Crear Base de Datos en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=KngM5bfpttA).
-* Crear Bucket en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=e6w9LwZJFIA).
+- Configurar las variables de entorno, puede seguir este [tutorial](https://www.youtube.com/watch?v=IolxqkL7cD8).
+- Crear Base de Datos en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=KngM5bfpttA).
+- Crear Bucket en AWS, puede seguir este [tutorial](https://www.youtube.com/watch?v=e6w9LwZJFIA).
 
 ```bash
 # Variables de entorno
@@ -181,6 +183,7 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/images/'
 ```
 
 4. **Clonar el repositorio del Frontend**
+
 ```bash
 # Clonar el repositorio
 $ git clone https://github.com/project-iot-fup/Frontend
@@ -190,8 +193,6 @@ $ npm install
 # Correr proyecto
 $ npm start
 ```
-
-
 
 ## Modo de Uso 📋
 
@@ -203,26 +204,21 @@ $ npm start
 
 ## Integración con Raspberry Pi 🧯
 
-
 ## Base de Datos 💽
 
-
-
-
-
-
 ## Tecnlogias 🧰
+
 En este proyecto se usaron las siguientes tecnologias:
-* [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/): Version 3 de la Raspberry Pi.
-* [PostgreSQL](https://www.postgresql.org/): Sistema de gestión de base de datos relacional.
-* [Python](https://www.python.org/): Version 3.10.7
-* [React](https://reactjs.org/): Version 18.2.0
-* [Django](https://www.djangoproject.com/): Version 4.1.0
-* [TailwindCSS](https://tailwindcss.com/): Version 3.1.8
-* [Postman](https://www.postman.com/): Version 9.1.5
-* [XAMPP](https://www.apachefriends.org/es/index.html): Version 8.0.11
-* [Arduino](https://www.arduino.cc/): Version 2.0.0
-* [Fritzing](https://fritzing.org/): Version 0.9.6
+- [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/): Version 3 de la Raspberry Pi.
+- [PostgreSQL](https://www.postgresql.org/): Sistema de gestión de base de datos relacional.
+- [Python](https://www.python.org/): Version 3.10.7
+- [React](https://reactjs.org/): Version 18.2.0
+- [Django](https://www.djangoproject.com/): Version 4.1.0
+- [TailwindCSS](https://tailwindcss.com/): Version 3.1.8
+- [Postman](https://www.postman.com/): Version 9.1.5
+- [XAMPP](https://www.apachefriends.org/es/index.html): Version 8.0.11
+- [Arduino](https://www.arduino.cc/): Version 2.0.0
+- [Fritzing](https://fritzing.org/): Version 0.9.6
 
 ## Contribuciones 🖇️
 
