@@ -131,6 +131,10 @@ $ python manage.py runserver
 
 ```bash
 # Variables de entorno
+# Para PostgreSQL
+DB_ENGINE='django.db.backends.postgresql_psycopg2'
+# Para MySQL
+DB_ENGINE='django.db.backends.mysql'
 DB_NAME='name_database'
 DB_USER='user_database'
 DB_PASSWORD='password_database'
@@ -209,6 +213,7 @@ $ npm start
 ## Tecnlogias 🧰
 
 En este proyecto se usaron las siguientes tecnologias:
+
 - [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/): Version 3 de la Raspberry Pi.
 - [PostgreSQL](https://www.postgresql.org/): Sistema de gestión de base de datos relacional.
 - [Python](https://www.python.org/): Version 3.10.7
