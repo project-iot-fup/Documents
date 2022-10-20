@@ -132,17 +132,21 @@ $ python manage.py runserver
 ```bash
 # Variables de entorno
 # Para PostgreSQL
-DB_ENGINE='django.db.backends.postgresql_psycopg2'
+DB_ENGINE=django.db.backends.postgresql_psycopg2
 # Para MySQL
-DB_ENGINE='django.db.backends.mysql'
-DB_NAME='name_database'
-DB_USER='user_database'
-DB_PASSWORD='password_database'
-DB_HOST='host_database'
+DB_ENGINE=django.db.backends.mysql
+DB_NAME=name_database
+DB_USER=user_database
+DB_PASSWORD=password_database
 
-AWS_ACCESS_KEY_ID='your_access_key_id'
-AWS_SECRET_ACCESS_KEY = 'your_secret_access_key'
-AWS_STORAGE_BUCKET_NAME = 'your_bucket_name'
+# MySQL HOST
+DB_HOST=3306
+# PostgreSQL HOST
+DB_HOST=5432
+
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY =your_secret_access_key
+AWS_STORAGE_BUCKET_NAME =your_bucket_name
 ```
 
 ```python
