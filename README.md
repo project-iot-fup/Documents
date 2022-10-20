@@ -138,11 +138,14 @@ DB_ENGINE=django.db.backends.mysql
 DB_NAME=name_database
 DB_USER=user_database
 DB_PASSWORD=password_database
-
-# MySQL HOST
-DB_HOST=3306
-# PostgreSQL HOST
-DB_HOST=5432
+# localhost
+DB_HOST=localhost
+# o la ip local
+DB_HOST=127.0.0.1
+# MySQL PORT
+DB_PORT=3306
+# PostgreSQL PORT
+DB_PORT=5432
 
 AWS_ACCESS_KEY_ID=your_access_key_id
 AWS_SECRET_ACCESS_KEY =your_secret_access_key
